@@ -75,3 +75,30 @@ body, html{
     background-attachment:scroll;
   }
 }
+
+.img{
+  margin-top: 60px;
+}
+
+
+.bg-modal{
+ width: 100%;
+ height: 100%; 
+ background-color: rgba(0,0,0,0);
+ display: flex;
+ justify-content: center;
+ position: absolute;
+ top:40px; 
+ align-items: center;
+}
+
+.modal-content{
+
+  width: 600px;
+  height: 600px;
+  background-color: #dbdde8;
+  border-radius: 4px;
+  align-items: center;
+}
+
+
