@@ -1,39 +1,49 @@
-$(document).ready(
-   function(){
-   $('#regisform').submit(function(event){
-
-        event.preventDefault();
-        var myFormData={
-        	username: $('#username').val(),
-        	password: $('#password').val()
-                 }
-
-                // console.log(myFormData);
-
-$.ajax({
-
-	url: 'http://localhost:3001/v1/users',
-	method: 'POST',
-	contentType: 'application/json',
-	data: JSON.stringify(myFormData),
+$(document).ready(function(){
+       $('#regisform').submit(function(event){
+          event.preventDefault();
+          var regisData= {
+            username: $('#username').val(),
+            email : $('#email').val(),
+            password: $('#password').val()
 
 
+ 
 
-	success :function(result,status){
+          }
+     
+
+          $.ajax({
+
+  url: 'http://localhost:3001/v1/registration',
+  method: 'POST',
+  contentType: 'application/json',
+  data: JSON.stringify(regisData),
+
+
+
+  success :function(result,status){
       console.log(result);
-	},
+  },
 
-	error:function(jqXHR,status) {
+  error:function(jqXHR,status) {
     console.log(status);
 
-	}
+  }
+
+            
 
 
-})    
+
+          })
+
+ 
 
 
-   })
+       })
 
-   })
 
+
+
+
+})
 	
