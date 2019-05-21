@@ -23,10 +23,11 @@ $(document).ready(function(){
 
   success :function(result,status){
       console.log(result);
+      console.log(status);      
   },
 
   error:function(jqXHR,status) {
-    console.log(status);
+    console.log(jqXHR.responseJSON.message);
 
   }
 
