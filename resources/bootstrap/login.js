@@ -1,36 +1,32 @@
 $(document).ready(function(){
-       $('#regisform').submit(function(event){
+       $('#loginForm').submit(function(event){
           event.preventDefault();
-          var regisData= {
+          var loginData= {
             username: $('#username').val(),
-            email : $('#email').val(),
             password: $('#password').val()
 
 
  
 
           }
-     
+       console.log(loginData);
 
           $.ajax({
 
-  url: 'http://localhost:3001/v1/registration',
+  url: 'http://localhost:3001/v1/login',
   method: 'POST',
   contentType: 'application/json',
-  data: JSON.stringify(regisData),
+  data: JSON.stringify(loginForm),
 
 
 
   success :function(result,status){
       console.log(result);
-      console.log(status);  
-
-      $('#successmessage').html(result.message)    
+      console.log(status);      
   },
 
   error:function(jqXHR,status) {
     console.log(jqXHR.responseJSON.message);
-    $('#successmessage').html(jqXHR.responseJSON.message);
 
   }
 
