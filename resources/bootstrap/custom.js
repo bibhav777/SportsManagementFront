@@ -25,7 +25,7 @@ $(document).ready(function(){
       console.log(result);
       console.log(status);  
 
-      $('#successmessage').html(result.message)    
+      $('#successmessage').html(result.message);    
   },
 
   error:function(jqXHR,status) {
@@ -33,17 +33,8 @@ $(document).ready(function(){
     $('#successmessage').html(jqXHR.responseJSON.message);
 
   }
-
-            
-
-
-
-          })
-
- 
-
-
-       })
+ })
+})
 
 
 
