@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
        $('#loginForm').submit(function(event){
           event.preventDefault();
@@ -20,8 +17,8 @@ $(document).ready(function(){
 
 
   success :function(result,status){
-      //console.log(result);
-      //console.log(status);      
+      console.log(result);
+      console.log(status);      
   },
 
   error:function(jqXHR,status) {
