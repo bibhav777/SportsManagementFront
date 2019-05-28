@@ -5,11 +5,10 @@ $(document).ready(function(){
             username: $('#username').val(),
             password: $('#password').val()
 }
-     
 
-          $.ajax({
-
-  url: 'http://localhost:3001/v1/auth',
+//console.log(loginData)
+ $.ajax({
+  url: 'http://localhost:3001/v1/login',
   method: 'POST',
   contentType: 'application/json',
   data: JSON.stringify(loginData),
@@ -17,8 +16,9 @@ $(document).ready(function(){
 
 
   success :function(result,status){
+    $('#message').html(result.message);
       console.log(result);
-      console.log(status);      
+         
   },
 
   error:function(jqXHR,status) {
@@ -26,16 +26,8 @@ $(document).ready(function(){
 
   }
 
-            
-
-
-
-          })
-
- 
-
-
-       })
+             })
+})
 
 
 
