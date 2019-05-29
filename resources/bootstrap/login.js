@@ -17,7 +17,8 @@ $(document).ready(function(){
 
   success :function(result,status){
     $('#message').html(result.message);
-      console.log(result);
+      console.log(result.token);
+      window.localStorage.setItem('token',result.token);
          
   },
 
