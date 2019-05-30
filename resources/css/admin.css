@@ -1,0 +1,29 @@
+body {
+            background: #000 !important; 
+            color: white;
+        }
+
+.welcome{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.card{
+    width: 45%;
+    height: 250px;
+    margin-left: 20px;
+    margin-top:50px; 
+    float: left;
+}
+
+.card2{
+    width: 43%;
+    height: 250px;
+float: right;
+margin-top:50px; 
+margin-right: 20px;
+}
