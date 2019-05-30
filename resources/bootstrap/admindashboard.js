@@ -6,7 +6,8 @@ url: 'http://localhost:3001/v1/adminDashboard',
 
 
    success :function(result,status){
-
+    
+  
 
 
   },
