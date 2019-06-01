@@ -35,12 +35,12 @@
             <i class="fa fa-arrow-left" onclick="Back()"></i>
         </div>
         <p class="h2 text-center">Add details</p>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data" id="addplayer">
             <div class="preview text-center">
                 <img class="preview-img" src="http://simpleicon.com/wp-content/uploads/account.png" alt="Preview Image" width="200" height="200"/>
                 <div class="browse-button">
                     <i class="fa fa-pencil-alt"></i>
-                    <input class="browse-input" type="file" required name="UploadedFile" id="uploadfile"/>
+                    <input class="browse-input" type="file" name="image" id="image"/>
                 </div>
                 <span class="Error"></span>
             </div>
@@ -51,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label>DOB:</label>
-                <input class="form-control" type="date" name="date" id="date" required placeholder="Enter Your Date of Birth"/>
+                <input class="form-control" type="date" name="dob" id="dob" required placeholder="Enter Your Date of Birth"/>
                 <span class="Error"></span>
             </div>
             <div class="form-group">
@@ -64,13 +64,7 @@
                 <input class="form-control" type="text" name="sports" id="sports" />
                 <span class="Error"></span>
             </div>
-            <div class="form-group">
-                <label>Gender:</label><br/>
-                <label><input type="radio" name="gender" id="male" required value="Male" checked /> Male</label>
-                <label><input type="radio" name="gender" id="female" required value="Female" /> Female</label>
-                <label><input type="radio" name="gender" id="other" required value="Other" /> Other</label>
-                <span class="Error"></span>
-            </div>
+          
             <div class="form-group">
                 <label>Height:</label>
                 <input class="form-control" type="text" name="height" id="height"  placeholder="Height in cm" />
@@ -78,12 +72,12 @@
             </div>
             <div class="form-group">
                 <label>Registered since:</label>
-                <input class="form-control" type="date" name="height" id="regisdate"/>
+                <input class="form-control" type="date" name="regisdate" id="regisdate"/>
                 <span class="Error"></span>
             </div> 
                 <div class="form-group">
                 <label>Position:</label>
-                <input class="form-control" type="text" name="height" id="text"/>
+                <input class="form-control" type="text" name="position" id="position"/>
                 <span class="Error"></span>
             </div> 
 
