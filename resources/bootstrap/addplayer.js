@@ -1,6 +1,7 @@
 $(document).ready(function(){
        $('#addplayer').submit(function(event){
           event.preventDefault();
+          var formdata= new FormData();
           var playerData= {
             image: $('#image')[0].files[0],
             fullname: $('#fullname').val(),
@@ -11,7 +12,6 @@ $(document).ready(function(){
             regisdate: $('#regisdate').val(),
             position: $('#position').val()
           }
-          var formdata= new FormData();
            for(key in playerData){
            formdata.append(key, playerData[key]);
          }
@@ -28,10 +28,9 @@ $(document).ready(function(){
 
 
   success :function(result,status){
-      console.log(result);
-      console.log(status);  
+    
 
-      //$('#successmessage').html(result.message);    
+      $('#message').html(result.message);    
   },
 
   error:function(jqXHR,status) {
