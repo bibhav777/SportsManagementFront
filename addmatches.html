@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>addmatch</title>
+    <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body style="background-color: white;" >
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #af2c23;">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav justify-content-center">
+                                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="login.html">Logout</a>
+                                    
+                                   
+                            </div> 
+                        </div>
+                    </nav>
+                </li>
+            </ul></div>
+        </div></nav>
+        <div class="container">
+
+     <form method="post" enctype="multipart/form-data" id="addMatch">
+            <div class="form-group">
+                <label> Team1:</label>
+                <input class="form-control" type="text" name="firstteam" required placeholder="Enter first team name" id="firstteam" />
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Team2:</label>
+                <input class="form-control" type="text" name="secondteam" id="secondteam" required placeholder="Enter Second team"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Sports type</label>
+                <input class="form-control" type="text" name="sportstype" id="sportstype" required placeholder=""/>
+                <span class="Error"></span>
+            </div>
+           <div class="form-group">
+                <label>Date</label>
+                <input class="form-control" type="date" name="date" id="date" />
+                <span class="Error"></span>
+            </div>
+          
+            <div class="form-group">
+                <label>Time</label>
+                <input class="form-control" type="time" name="time" id="time"/>
+                <span class="Error"></span>
+            </div>
+          
+
+            <div class="form-group">
+                <input class="btn btn-primary btn-block" type="submit" id="submit" value="Create"/>
+            </div>
+        </form>
+
+        <p id="message"> </p>
+    </div>
+       
+            
+
+        
+</body>
+    </html>
+<script type="text/javascript" src="resources/jquery.js"></script>
+<script type="text/javascript" src="resources/bootstrap/addmatches.js" ></script>

@@ -4,6 +4,7 @@ $.ajax({
 
   url: 'http://localhost:3001/viewplayers',
   method: 'GET',
+  contentType:'application/json',
   dataType: 'json',
 
 
@@ -12,14 +13,10 @@ $.ajax({
     console.log(result);
     for (key in result){
     	   $('#card').append('  <div class="card" id="card">\
-  <img src="/img/beckham.jpg" class="card-img-top" alt="..." style="height: 450px;">\
-  <div class="card-body">\
-    <h5 class="card-title">\
+  <img src= "file:///home/reddevils/webapiback/uploads/'+result[key].image+'"/>\
 \
-\
-     </h5>\
-    <p class="card-text">\
-    id:'+result[key].id+'\
+<p class="card-text">\   \
+    image: '+result[key].image+'                         \
     Fullname:'+result[key].fullname+' <br>\
     Date of Birth:'+result[key].dob+'<br>\
     Address:'+result[key].address+'<br>\
@@ -27,11 +24,10 @@ $.ajax({
     Height:'+result[key].height+'<br>\
     Joined since:'+result[key].registersince+' <br>\
     Position:'+result[key].position+'<br>\
-    <a href="addplayer.html" class="btn btn-light">Add players</a>\
-    <a href="players.html" class="btn btn-light">View players</a>\
+    <a href="addplayer.html" class="btn btn-light">Update</a>\
+    <a href="players.html" class="btn btn-light">Delete </a>\
   </div><br>\
 ')
-
 
     }
 

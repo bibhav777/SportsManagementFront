@@ -1,7 +1,4 @@
-
-
-
-  $.ajax({
+$.ajax({
 url: 'http://localhost:3001/v1/adminDashboard',
   method: 'GET',
   dataType: 'json',
