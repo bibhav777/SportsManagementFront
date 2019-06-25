@@ -13,10 +13,10 @@ $.ajax({
     console.log(result);
     for (key in result){
     	   $('#card').append('  <div class="card" id="card">\
-  <img src= "file:///home/reddevils/webapiback/uploads/'+result[key].image+'"/>\
+  <img src= "http://localhost:3001/uploads/'+result[key].image+'" height="200" width="200"/>\
 \
 <p class="card-text">\   \
-    image: '+result[key].image+'                         \
+                           \
     Fullname:'+result[key].fullname+' <br>\
     Date of Birth:'+result[key].dob+'<br>\
     Address:'+result[key].address+'<br>\
