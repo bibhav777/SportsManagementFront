@@ -13,8 +13,8 @@ $.ajax({
   dataType: 'json',
 success: function(result,status){
   //console.log(result)
-$('#fullname').val(result.fullname);
-$('#dob').val(result.dob)
+$('#firstteam').val(result.firstteam);
+$('#secondteam').val(result.secondteam)
 $('#sportstype').val(result.sportstype)
 $('#date').val(result.date)
 $('#time').val(result.time)

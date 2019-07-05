@@ -118,21 +118,52 @@ $.ajax({
   success :function(result,status){
     console.log(result);
     for (key in result){
-    	   $('#card').append('  <div class="card" id="card">\
-  <img src= "http://localhost:3001/uploads/'+result[key].image+'" height="200" width="200"/>\
-\
-<p class="card-text">\   \
-                           \
-    Fullname:'+result[key].fullname+' <br>\
-    Date of Birth:'+result[key].dob+'<br>\
-    Address:'+result[key].address+'<br>\
+    	   $('#card').append('<div class="container cta-100 " id="card">\
+       \
+          <!-- Carousel items -->\
+                <div class="carousel-inner">\
+                  <div class="carousel-item active">\
+                    <div class="row">\
+                     \
+                        <div class="item-box-blog">\
+                          <div class="item-box-blog-image">\
+                            <!--Date-->\
+            \
+                          <!--Image-->\
+                            <figure> <img src="http://localhost:3001/uploads/'+result[key].image+'" height="200" width="200"/> </figure>\
+                          </div>\
+                          <div class="item-box-blog-body">\
+                            <!--Heading-->\
+                            <div class="item-box-blog-heading">\
+                              <a href="#" tabindex="0">\
+                                <h5>Player Details</h5>\
+                              </a>\
+                            </div>\
+                            <!--Data-->\
+                            <!--Text-->\
+                            <div class="item-box-blog-text">\
+                               Fullname:'+result[key].fullname+' <br>\
+                               Date of Birth:'+result[key].dob+'<br>\
+                               Address:'+result[key].address+'<br>\
     Sports:'+result[key].sportsinvolved+' <br>\
     Height:'+result[key].height+'<br>\
     Joined since:'+result[key].registersince+' <br>\
     Position:'+result[key].position+'<br>\
-    <a class="btn btn-primary" uid="'+result[key].id+'"  id="edituser" class="fa fa-edit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>\
-     <button type="button" class="btn btn-danger" uid="'+result[key].id+'" id="delete" >Delete</button>\
-  </div><br>\
+                            </div>\
+                            <a class="btn btn-primary" uid="'+result[key].id+'"  id="edituser" class="fa fa-edit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>\
+                            <button type="button" class="btn btn-danger" uid="'+result[key].id+'" id="delete" >Delete</button>\
+                        </div>\
+                      </div>\
+                                              </div>\
+                      </div>\
+                    </div>\
+                    <!--.row-->\
+                  </div>\
+                  <!--.item-->\
+                \
+                <!--.carousel-inner-->\
+              <!--.Carousel-->\
+            </div>\
 ')
 
     }
@@ -149,3 +180,5 @@ $.ajax({
   }
  })
 })
+
+
